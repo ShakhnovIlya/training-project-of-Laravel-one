@@ -13,6 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/todos', [\App\Http\Controllers\PagesController::class, "todos"]);
-Route::get('/todos/done', [\App\Http\Controllers\PagesController::class, "todosDone"]);
-Route::get('/todos/not-done', [\App\Http\Controllers\PagesController::class, "todosNotDone"]);
+Route::get('/', [\App\Http\Controllers\PagesController::class, "blogPage"]);
