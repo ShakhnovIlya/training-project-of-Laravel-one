@@ -16,4 +16,20 @@ class PagesController extends Controller
             "articles" => $articles
         ]);
     }
+
+        public function articlePage($id)
+        {
+            $article = Article::find($id);
+
+            if (!$article){
+                return abort(404);
+            }
+
+            return view('article', [
+                "article" => $article
+            ]);
+        }
+
+
+
 }
